@@ -5,20 +5,20 @@
 class TypemdCli < Formula
   desc "A local-first CLI knowledge management tool"
   homepage "https://typemd.io"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/typemd/typemd/releases/download/v0.7.0/tmd-darwin-x64.tar.gz"
-      sha256 "cb5c7a5302c813dbc9f41252f01ef6c7d702f4210dddbd49c72aca45b742ee44"
+      url "https://github.com/typemd/typemd/releases/download/v0.8.0/tmd-darwin-x64.tar.gz"
+      sha256 "cda5d89ef3ce7c1d79e14e87f664cf6482cb9272bdc5e4a6485aaf9a5f9d2fc1"
 
       define_method(:install) do
         bin.install "tmd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/typemd/typemd/releases/download/v0.7.0/tmd-darwin-arm64.tar.gz"
-      sha256 "e0a2a5d28759acfcb05ef75c3fc0f3f4b6efe185c073fa75935444a2d6d6cc08"
+      url "https://github.com/typemd/typemd/releases/download/v0.8.0/tmd-darwin-arm64.tar.gz"
+      sha256 "b8b927ab3d9e1abad93f7e5e377dd92f2477617ec6b7f8439f5f84e2a7aff165"
 
       define_method(:install) do
         bin.install "tmd"
@@ -28,15 +28,15 @@ class TypemdCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typemd/typemd/releases/download/v0.7.0/tmd-linux-x64.tar.gz"
-      sha256 "bc952572a67a8c41a3e2b324af579cf3235d39b7aa7a5cfce8f0a5dacabf79de"
+      url "https://github.com/typemd/typemd/releases/download/v0.8.0/tmd-linux-x64.tar.gz"
+      sha256 "884ac34ad3988357c5bce7b280c5cd5c60354a82144398f61b8488512063d6b9"
       define_method(:install) do
         bin.install "tmd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typemd/typemd/releases/download/v0.7.0/tmd-linux-arm64.tar.gz"
-      sha256 "7ffb9ce3a6a9edcb777599e0b94ed7982fb6a27171680e4524a98c9d153fa472"
+      url "https://github.com/typemd/typemd/releases/download/v0.8.0/tmd-linux-arm64.tar.gz"
+      sha256 "bacec4a5437d14def301e87f4c75d0dc87b3d0cefa28ee5726a5503b2df1e596"
       define_method(:install) do
         bin.install "tmd"
       end
